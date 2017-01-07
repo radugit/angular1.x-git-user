@@ -1,0 +1,12 @@
+<div class="gtu-container" >
+    <div class="gtu-row">
+        <div>Git User: <span class="gtu-red">*</span></div><!--
+        --><div><input type="text" ng-model="user_name" value="" class="gtu-input-user"></div>
+    </div>
+    <div class="gtu-row gtu-but-row"><input type="button" ng-click="get_user_repos()" value="Search"></div>
+</div>
+<b>Note:</b> <span class="gtu-small">if the server does not respond in 8 seconds, an alert message will appear<br>saying that the server is unresponsive and the user should try again later.</span>
+
+<div class="gtu-result">
+    <div ng-repeat="ud in user_data">&bull; {{ud.name}}: <a href="{{ud.html_url}}" target="_blank">{{ud.html_url}}</a></div>
+</div>
